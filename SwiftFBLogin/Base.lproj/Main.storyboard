@@ -15,8 +15,55 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AMJ-Nz-LWP" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="G2Z-KC-jha"/>
+                                    <constraint firstAttribute="height" constant="100" id="nZ5-fQ-YJu"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="G2Z-KC-jha"/>
+                                        <exclude reference="nZ5-fQ-YJu"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="G2Z-KC-jha"/>
+                                        <include reference="nZ5-fQ-YJu"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="AMJ-Nz-LWP" secondAttribute="centerY" id="6zb-5m-FVS"/>
+                            <constraint firstAttribute="centerX" secondItem="AMJ-Nz-LWP" secondAttribute="centerX" id="gEX-qu-gca"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="AMJ-Nz-LWP"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="6zb-5m-FVS"/>
+                                <exclude reference="gEX-qu-gca"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="AMJ-Nz-LWP"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="6zb-5m-FVS"/>
+                                <include reference="gEX-qu-gca"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="loginView" destination="AMJ-Nz-LWP" id="vkx-m4-AYs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     
+    @IBOutlet var loginView: FBSDKLoginButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,18 +21,13 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
             // User is already logged in, do work such as go to next view controller.
             
             // Or Show Logout Button
-            let loginView : FBSDKLoginButton = FBSDKLoginButton()
-            self.view.addSubview(loginView)
-            loginView.center = self.view.center
+
             loginView.readPermissions = ["public_profile", "email", "user_friends", "user_photos"]
             loginView.delegate = self
             self.returnUserData()
         }
         else
         {
-            let loginView : FBSDKLoginButton = FBSDKLoginButton()
-            self.view.addSubview(loginView)
-            loginView.center = self.view.center
             loginView.readPermissions = ["public_profile", "email", "user_friends", "user_photos"]
             loginView.delegate = self
         }
