@@ -19,8 +19,6 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
             
             // Or Show Logout Button
             let loginView : FBSDKLoginButton = FBSDKLoginButton()
-            self.view.addSubview(loginView)
-            loginView.center = self.view.center
             loginView.readPermissions = ["public_profile", "email", "user_friends", "user_photos"]
             loginView.delegate = self
             self.returnUserData()
@@ -28,8 +26,6 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         else
         {
             let loginView : FBSDKLoginButton = FBSDKLoginButton()
-            self.view.addSubview(loginView)
-            loginView.center = self.view.center
             loginView.readPermissions = ["public_profile", "email", "user_friends","user_photos"]
             loginView.delegate = self
         }

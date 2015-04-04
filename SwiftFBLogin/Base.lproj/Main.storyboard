@@ -20,12 +20,20 @@
                                 <rect key="frame" x="-27" y="62" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EIE-ga-kmP" customClass="FBSDKLoginButton">
-                                <rect key="frame" x="116" y="320" width="368" height="100"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lrI-jl-hMe" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="150" y="250" width="300" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="jnF-Dm-i4B"/>
+                                    <constraint firstAttribute="height" constant="100" id="tj2-p2-r22"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="lrI-jl-hMe" secondAttribute="centerY" id="fIx-Ve-Q2f"/>
+                            <constraint firstAttribute="centerX" secondItem="lrI-jl-hMe" secondAttribute="centerX" id="zbW-dO-NFI"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="Lfw-gT-94e"/>
