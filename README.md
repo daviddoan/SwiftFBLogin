@@ -21,4 +21,4 @@ Swift Compiler - Objective C
 
 Compatibility Headers : YES
 
-Header Source File: /AppName/<headerfilename.h>
+Header Source File: /AppName/[headerfilename.h]
