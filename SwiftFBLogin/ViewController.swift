@@ -7,7 +7,9 @@
 //
 
 import UIKit
+
 class ViewController: UIViewController, FBSDKLoginButtonDelegate {
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +21,8 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
             
             // Or Show Logout Button
             let loginView : FBSDKLoginButton = FBSDKLoginButton()
+            self.view.addSubview(loginView)
+            loginView.center = self.view.center
             loginView.readPermissions = ["public_profile", "email", "user_friends", "user_photos"]
             loginView.delegate = self
             self.returnUserData()
@@ -26,7 +30,9 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         else
         {
             let loginView : FBSDKLoginButton = FBSDKLoginButton()
-            loginView.readPermissions = ["public_profile", "email", "user_friends","user_photos"]
+            self.view.addSubview(loginView)
+            loginView.center = self.view.center
+            loginView.readPermissions = ["public_profile", "email", "user_friends", "user_photos"]
             loginView.delegate = self
         }
         
@@ -78,8 +84,8 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                 println("User Name is: \(userName)")
                 let userEmail : NSString = result.valueForKey("email") as NSString
                 println("User Email is: \(userEmail)")
-                let userid: NSString = result.valueForKey("id") as NSString
-                println("Picture is: http://graph.facebook.com/\(userid)/picture?type=large")
+                let userID : NSString = result.valueForKey("id") as NSString
+                println("User ID: \(userID)")
             }
         })
     }
